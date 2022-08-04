@@ -1,11 +1,21 @@
-#' Title
+#' @Title
+#' Tabela com os resultados da Análise de Variância (ANOVA)
+#' 
+#' @description 
+#' Cria uma tabela com os resultados da ANOVA.
+#' 
+#' @details 
+#' Converte o resultado da função summary.aov em um objeto da classe data.frame.
+#' 
+#' @param model objeto da classe aov obtido da ANOVA.
 #'
-#' @param model 
+#' @return data.frame com o resultado da ANOVA.
 #'
-#' @return
-#' @export
-#'
+#' @author Rubens Oliveira da Cunha Júnior.
+#' 
 #' @examples
+#' caminho <- './dados/P2300020827.csv
+#' poco <- import_RIMAS(caminho)
 table.summary.aov <- function(model) {
   suppressWarnings(if(is.na(match(class(model), c("aov")))) {
     stop("Invalid argument type: 'model' must be of class: 'aov'")
