@@ -1,4 +1,4 @@
-# ANOVA-table
+# interaction
 
 Funções para estudo de interações e análise de variância (ANOVA).
 
