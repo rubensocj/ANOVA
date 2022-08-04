@@ -11,22 +11,23 @@
 #'
 #' @return data.frame com o resultado da ANOVA.
 #'
-#' @author Rubens Oliveira da Cunha Júnior.
+#' @author Rubens Oliveira da Cunha Júnior (cunhajunior.rubens@gmail.com).
 #' 
 #' @examples
-#' caminho <- './dados/P2300020827.csv
-#' poco <- import_RIMAS(caminho)
+#' data(iris)
+#' mod <- aov(Sepal.Length ~ Species, data = iris)
+#' tb <- table.summary.aov(mod)
 table.summary.aov <- function(model) {
   suppressWarnings(if(is.na(match(class(model), c("aov")))) {
     stop("Invalid argument type: 'model' must be of class: 'aov'")
   })
   
   # results of ANOVA
-  res <- rbind.data.frame(summary.aov(mod.aov))
+  res <- rbind.data.frame(summary.aov(model))
   colnames(res) <- c('Df','Sum Sq','Mean Sq','F value','Pr(>F)')
   
   # source of variation
-  src <- c(attributes(mod.aov$terms)$term.labels, "Residuals")
+  src <- c(attributes(model$terms)$term.labels, "Residuals")
   tb <- cbind("Source of variation" = src, res)
   
   # signif. codes
