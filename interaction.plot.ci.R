@@ -1,16 +1,21 @@
 #' @Title
-#' Gr·fico de interaÁ„o bidirecional (dois fatores)
+#' Gr√°fico de intera√ß√£o bidirecional
 #' 
 #' @description 
-#' Cria um gr·fico de interaÁ„o bidirecional, comumente usado para
-#' An·lise de Vari‚ncia (ANOVA) de dois fatores.
-#' 
+#' Cria um gr√°fico de intera√ß√£o bidirecional, comumente usado na
+#' An√°lise de Vari√¢ncia (ANOVA) com dois fatores.
+#'
+#' @details
+#' O gr√°fico exibe a m√©dia da vari√°vel dependente (resposta) para
+#' as combina√ß√µes bidirecionais dos fatores e adiciona barras de erro
+#' com o intervalo de confian√ßa de 95% para a m√©dia.
+#'
 #' @param data data.frame com o conjunto de dados estudado.
 #' @param x string com o nome da coluna para o fator 1.
-#' @param y string com o nome da coluna da vari·vel dependente.
+#' @param y string com o nome da coluna da vari√°vel dependente (resposta).
 #' @param color string com o nome da coluna para o fator 2.
 #'
-#' @author Rubens Oliveira da Cunha J˙nior (cunhajunior.rubens@gmail.com).
+#' @author Rubens Oliveira da Cunha J√∫nior (cunhajunior.rubens@gmail.com).
 #' 
 #' @examples
 #' data(CO2)
