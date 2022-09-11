@@ -1,4 +1,4 @@
-# Funções auxiliares
+# Funções diversas
 
 Funções para análise exploratória de dados, estudo de interação e análise de variância (ANOVA).
 
